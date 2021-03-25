@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <!-- make MSBuild track this file for incremental builds. -->
+    <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.*" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net471'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.*" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net47'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.*" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net462'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.*" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net461'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.*" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net46'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.*" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net45'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.*" />
+      </ItemGroup>
+    </When>
+  </Choose>
+</Project>

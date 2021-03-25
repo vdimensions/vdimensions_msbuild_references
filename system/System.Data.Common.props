@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard2.1'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.Common" Version="4.3" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.Common" Version="4.3" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.6'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.Common" Version="4.3" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.5'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.Common" Version="4.3" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.4'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.Common" Version="4.3" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.Common" Version="4.3" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+      <ItemGroup>
+        <PackageReference Include="System.Data.Common" Version="4.3" />
+      </ItemGroup>
+    </When>
+  </Choose>
+</Project>
