@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+      <ItemGroup>
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+      </ItemGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+      <ItemGroup>
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+      </ItemGroup>
+    </When>
+    
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+      </ItemGroup>
+    </When>
+    
+    <When Condition="'$(TargetFramework)' == 'net47'">
+      <ItemGroup>
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+      </ItemGroup>
+    </When>
+    
+    <When Condition="'$(TargetFramework)' == 'net461'">
+      <ItemGroup>
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+      </ItemGroup>
+    </When>
+    
+    <When Condition="'$(TargetFramework)' == 'net45'">
+      <ItemGroup>
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+      </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
