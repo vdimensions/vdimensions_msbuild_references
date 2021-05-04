@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <PropertyGroup>
-    <!-- make MSBuild track this file for incremental builds. -->
-    <!-- ref https://blogs.msdn.microsoft.com/msbuild/2005/09/26/how-to-ensure-changes-to-a-custom-target-file-prompt-a-rebuild/ -->
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
-  </PropertyGroup>
-  
   <Choose>
     <When Condition="'$(TargetFramework)' == 'net5.0'">
       <ItemGroup>
-        <PackageReference Include="System.Reactive" Version="5.0.0" />
+        <PackageReference Update="System.Reactive" Version="5.0.0" />
       </ItemGroup>
     </When>
     
     <When Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
       <ItemGroup>
-        <PackageReference Include="System.Reactive" Version="5.0.0" />
+        <PackageReference Update="System.Reactive" Version="5.0.0" />
       </ItemGroup>
     </When>
 
     <When Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
       <ItemGroup>
-        <PackageReference Include="System.Reactive" Version="4.3.2" />
+        <PackageReference Update="System.Reactive" Version="4.3.2" />
       </ItemGroup>
     </When>
 
     <When Condition="'$(TargetFramework)' == 'netstandard2.1'">
       <ItemGroup>
-        <PackageReference Include="System.Reactive" Version="4.3.2" />
+        <PackageReference Update="System.Reactive" Version="4.3.2" />
       </ItemGroup>
     </When>
 
     <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
       <ItemGroup>
-        <PackageReference Include="System.Reactive" Version="4.3.2" />
+        <PackageReference Update="System.Reactive" Version="4.3.2" />
       </ItemGroup>
     </When>
     
     <When Condition="'$(TargetFramework)' == 'net46'">
       <ItemGroup>
-        <PackageReference Include="System.Reactive" Version="4.3.2" />
+        <PackageReference Update="System.Reactive" Version="4.3.2" />
       </ItemGroup>
     </When>
   </Choose>
