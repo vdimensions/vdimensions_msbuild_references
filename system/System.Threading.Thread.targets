@@ -3,18 +3,24 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'netstandard2.1'">
       <ItemGroup>
-        <PackageReference Include="System.Threading.Thread" Version="4.3" />
+        <PackageReference Update="System.Threading.Thread" Version="4.3.*" />
       </ItemGroup>
     </When>
     <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
       <ItemGroup>
-        <PackageReference Include="System.Threading.Thread" Version="4.3" />
+        <PackageReference Update="System.Threading.Thread" Version="4.3.*" />
       </ItemGroup>
     </When>
     <When Condition="'$(TargetFramework)' == 'netstandard1.6'">
       <ItemGroup>
-        <PackageReference Include="System.Threading.Thread" Version="4.3" />
+        <PackageReference Update="System.Threading.Thread" Version="4.3.*" />
       </ItemGroup>
     </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Remove="System.Threading.Thread" />
+      </ItemGroup>
+    </Otherwise>
   </Choose>
 </Project>

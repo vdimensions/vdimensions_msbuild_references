@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+      <ItemGroup>
+        <PackageReference Remove="System.Diagnostics.TraceSource" />
+      </ItemGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Remove="System.Diagnostics.TraceSource" />
+      </ItemGroup>
+    </When>
+
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Remove="System.Diagnostics.TraceSource" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' " >
+      <ItemGroup>
+        <PackageReference Remove="System.Diagnostics.TraceSource" />
+      </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Diagnostics.TraceSource" Version="4.3.*" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+    
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' " >
+      <ItemGroup>
+        <Reference Include="System.Configuration" />
+        <PackageReference Remove="System.Configuration.ConfigurationManager" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <Reference Remove="System.Configuration" />
+        <PackageReference Update="System.Configuration.ConfigurationManager" Version="4.4.*" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

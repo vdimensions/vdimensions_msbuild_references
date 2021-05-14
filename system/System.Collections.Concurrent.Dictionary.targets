@@ -3,17 +3,17 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
       <ItemGroup>
-        <PackageReference Include="Portable.ConcurrentDictionary" Version="1.0.4" />
+        <PackageReference Update="Portable.ConcurrentDictionary" Version="1.0.4" />
       </ItemGroup>
     </When>
     <When Condition="'$(TargetFramework)' == 'net35'">
       <ItemGroup>
-        <PackageReference Include="Portable.ConcurrentDictionary" Version="1.0.4" />
+        <PackageReference Update="Portable.ConcurrentDictionary" Version="1.0.4" />
       </ItemGroup>
     </When>
     <When Condition="'$(TargetFramework)' == 'net20'">
       <ItemGroup>
-        <PackageReference Include="Portable.ConcurrentDictionary" Version="1.0.4" />
+        <PackageReference Update="Portable.ConcurrentDictionary" Version="1.0.4" />
       </ItemGroup>
     </When>
   </Choose>
