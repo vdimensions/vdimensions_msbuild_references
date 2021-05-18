@@ -1,39 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <When Condition="'$(TargetFramework)' == 'net40'">
       <ItemGroup>
-        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+        <PackageReference Remove="System.ValueTuple" />
       </ItemGroup>
     </When>
 
-    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <When Condition="'$(TargetFramework)' == 'net35'">
       <ItemGroup>
-        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+        <PackageReference Remove="System.ValueTuple" />
       </ItemGroup>
     </When>
     
-    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+    <When Condition="'$(TargetFramework)' == 'net30'">
       <ItemGroup>
-        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+        <PackageReference Remove="System.ValueTuple" />
       </ItemGroup>
     </When>
     
-    <When Condition="'$(TargetFramework)' == 'net47'">
+    <When Condition="'$(TargetFramework)' == 'net20'">
       <ItemGroup>
-        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
-      </ItemGroup>
-    </When>
-    
-    <When Condition="'$(TargetFramework)' == 'net461'">
-      <ItemGroup>
-        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
-      </ItemGroup>
-    </When>
-    
-    <When Condition="'$(TargetFramework)' == 'net45'">
-      <ItemGroup>
-        <PackageReference Update="System.ValueTuple" Version="4.5.0" />
+        <PackageReference Remove="System.ValueTuple" />
       </ItemGroup>
     </When>
     
