@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <VDimensionsNetStandardShimVersion Condition=" '$(NetStandardShimVersion)' == '' ">0.1-preview.*</VDimensionsNetStandardShimVersion>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NetStandard.Shim" Version="$(VDimensionsNetStandardShimVersion)" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net40'">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NetStandard.Shim" Version="$(VDimensionsNetStandardShimVersion)" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NetStandard.Shim" Version="$(VDimensionsNetStandardShimVersion)" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NetStandard.Shim" Version="$(VDimensionsNetStandardShimVersion)" />
+      </ItemGroup>
+    </When>
+  </Choose>
+</Project>
