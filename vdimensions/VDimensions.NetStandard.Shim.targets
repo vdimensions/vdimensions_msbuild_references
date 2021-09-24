@@ -5,6 +5,16 @@
   </PropertyGroup>
 
   <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NetStandard.Shim" Version="$(VDimensionsNetStandardShimVersion)" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NetStandard.Shim" Version="$(VDimensionsNetStandardShimVersion)" />
+      </ItemGroup>
+    </When>
     <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
       <ItemGroup>
         <PackageReference Update="VDimensions.NetStandard.Shim" Version="$(VDimensionsNetStandardShimVersion)" />
