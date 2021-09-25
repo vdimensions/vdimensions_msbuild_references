@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'net20'">
+    <When Condition="'$(TargetFramework)' == 'netcoreapp2.2' OR '$(TargetFramework)' == 'netstandard2.0'">
       <ItemGroup>
-        <PackageReference Remove="Npgsql" />
+        <PackageReference Update="Microsoft.Net.Http.Headers" Version="2.2.*" />
       </ItemGroup>
     </When>
+    
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="Npgsql" />
       </ItemGroup>
     </Otherwise>
   </Choose>

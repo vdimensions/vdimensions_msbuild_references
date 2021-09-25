@@ -3,12 +3,12 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'net20'">
       <ItemGroup>
-        <PackageReference Remove="Npgsql" />
+        <PackageReference Include="LinqBridge" />
       </ItemGroup>
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="Npgsql" />
+        <PackageReference Remove="LinqBridge" />
       </ItemGroup>
     </Otherwise>
   </Choose>

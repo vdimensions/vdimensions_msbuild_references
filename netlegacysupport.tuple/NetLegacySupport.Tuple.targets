@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <Choose>
-    <When Condition="'$(TargetFramework)' == 'net20'">
-      <ItemGroup>
-        <PackageReference Update="NetLegacySupport.Tuple" Version="1.1.*" />
-      </ItemGroup>
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <PackageReference Remove="NetLegacySupport.Tuple" />
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
+  <ItemGroup>
+    <PackageReference Update="NetLegacySupport.Tuple" Version="1.1.*" />
+  </ItemGroup>
 </Project>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'net20'">
+    <When Condition="'$(TargetFramework)' != 'net20'">
       <ItemGroup>
-        <PackageReference Remove="Npgsql" />
+        <PackageReference Include="NetLegacySupport.Tuple" />
       </ItemGroup>
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Include="Npgsql" />
+        <PackageReference Remove="NetLegacySupport.Tuple" />
       </ItemGroup>
     </Otherwise>
   </Choose>
