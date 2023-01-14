@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!-- 
+     | net
+     -->
+    <When Condition=" '$(TargetFramework)' == 'net7.0' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net6.0' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netcoreapp
+     -->
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netstandard
+     -->
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netframework      
+    -->
+    <When Condition=" '$(TargetFramework)' == 'net48' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net472' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net471' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net47' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net463' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net462' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net461' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net46' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net452' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net451' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net45' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net40' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net35' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
