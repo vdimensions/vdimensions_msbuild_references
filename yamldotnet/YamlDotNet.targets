@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!-- 
+     | netstandard
+     -->
+    <When Condition="'$(TargetFramework)' == 'netstandard1.6'">
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.5'">
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.4'">
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netcoreapp
+     -->
+     <When Condition="'$(TargetFramework)' == 'netcoreapp1.1'">
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netframewrrk
+     -->
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="8.1.2" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="YamlDotNet" Version="12.3.1" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
