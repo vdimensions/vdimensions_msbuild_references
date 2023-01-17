@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!-- 
+     | netstandard
+     -->
+    <When Condition="'$(TargetFramework)' == 'netstandard1.6'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.5'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.4'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <!-- 
+     | netcoreapp
+     -->
+    <When Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp1.1'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="4.3.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe" Version="4.3.0" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netframework 
+     -->
+    <When Condition="'$(TargetFramework)' == 'net452'">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe"  Version="5.0.0" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net451'">
+     <ItemGroup>
+       <PackageReference Update="System.Runtime.CompilerServices.Unsafe"  Version="5.0.0" />
+     </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net45'">
+     <ItemGroup>
+       <PackageReference Update="System.Runtime.CompilerServices.Unsafe"  Version="5.0.0" />
+     </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net40'">
+     <ItemGroup>
+       <PackageReference Remove="System.Runtime.CompilerServices.Unsafe" />
+     </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+     <ItemGroup>
+       <PackageReference Remove="System.Runtime.CompilerServices.Unsafe" />
+     </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net30'">
+     <ItemGroup>
+       <PackageReference Remove="System.Runtime.CompilerServices.Unsafe" />
+     </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+     <ItemGroup>
+       <PackageReference Remove="System.Runtime.CompilerServices.Unsafe" />
+     </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.CompilerServices.Unsafe"  Version="6.0.0" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
