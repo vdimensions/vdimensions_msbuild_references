@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <ItemGroup>
-    <PackageReference Update="System.Xml.XmlSerializer" Version="4.3.*" />
-  </ItemGroup>
+  <Choose>
+    <!-- 
+     | netframework
+     -->
+    <When Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' " >
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlSerializer" />
+      </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3.0" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
 </Project>

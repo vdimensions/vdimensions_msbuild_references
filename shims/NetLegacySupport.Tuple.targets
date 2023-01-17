@@ -3,13 +3,14 @@
   <Choose>
     <When Condition="'$(TargetFramework)' == 'net20'">
       <ItemGroup>
-        <PackageReference Include="LinqBridge" />
+        <PackageReference Update="NetLegacySupport.Tuple" Version="1.1.1" />
       </ItemGroup>
     </When>
     <Otherwise>
       <ItemGroup>
-        <PackageReference Remove="LinqBridge" />
+        <PackageReference Remove="NetLegacySupport.Tuple" />
       </ItemGroup>
     </Otherwise>
   </Choose>
+  
 </Project>

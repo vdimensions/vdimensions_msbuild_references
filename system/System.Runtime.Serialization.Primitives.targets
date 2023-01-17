@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'net40'">
+      <ItemGroup>
+        <PackageReference Remove="System.Runtime.Serialization.Primitives" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Remove="System.Runtime.Serialization.Primitives" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <ItemGroup>
+        <PackageReference Remove="System.Runtime.Serialization.Primitives" />
+      </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

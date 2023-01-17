@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ItemGroup>
-    <PackageReference Update="LinqBridge" Version="1.3" />
+    <PackageReference Include="LinqBridge" />
   </ItemGroup>
 </Project>

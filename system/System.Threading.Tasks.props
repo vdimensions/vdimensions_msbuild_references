@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-  <Choose>
-    <When Condition="'$(TargetFramework)' == 'net35'">
-      <PropertyGroup>
-      </PropertyGroup>
-      <ItemGroup>
-        <PackageReference Include="System.Threading.Tasks.Unofficial" Version="3.1" />
-      </ItemGroup>
-    </When>
-  </Choose>
+  <ItemGroup>
+    <PackageReference Include="System.Threading.Tasks.Unofficial" Version="3.1" />
+  </ItemGroup>
 </Project>

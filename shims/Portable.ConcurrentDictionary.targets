@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+      <ItemGroup>
+        <PackageReference Update="Portable.ConcurrentDictionary" Version="1.0.4" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Update="Portable.ConcurrentDictionary" Version="1.0.4" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Update="Portable.ConcurrentDictionary" Version="1.0.4" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Remove="Portable.ConcurrentDictionary" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

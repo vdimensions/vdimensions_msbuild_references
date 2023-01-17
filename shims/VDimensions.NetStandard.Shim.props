@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ItemGroup>
-    <PackageReference Update="VDimensions.NetStandard.Shim" Version="0.1-preview.*" />
+    <PackageReference Include="VDimensions.NetStandard.Shim" />
   </ItemGroup>
 </Project>

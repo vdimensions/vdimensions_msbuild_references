@@ -27,7 +27,7 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Diagnostics.TraceSource" Version="4.3.*" />
+        <PackageReference Update="System.Diagnostics.TraceSource" Version="4.3" />
       </ItemGroup>
     </Otherwise>
   </Choose>
