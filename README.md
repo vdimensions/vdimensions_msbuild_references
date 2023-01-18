@@ -1,6 +1,6 @@
 # MSBuild References
 
-This repository contains a currated list of MSBuild targets which would add package dependencies to your project for various .NET libraries.  
+This repository contains a currated list of MSBuild targets which would manage package dependencies for various .NET libraries that you may need in your project.  
 
 ## Foreword
 
@@ -31,4 +31,9 @@ We wanted to make referencing a package to a project simple and inthuitive. So, 
 
         <PackageReference Include="SomePackage" />
 
-If you followed step 2 from [How to Use](#how-to-use), you will have the `VDimensions.MSBuild.References.targets` in your project. As long as `SomePackage` is a dependency that is [managed by `VDimensions.MSBuild.References`](supported_packages.md), our target will "decide" if you need this dependency based on your TFM, and will automatically pick the latest compatible version per TFM. For TFMs that do no support the package you requested, the `PackageReference` will be removed without needing your intervention.
+If you followed step 2 from [How to Use](#how-to-use), you will have the `VDimensions.MSBuild.References.targets` in your project. As long as `SomePackage` is a dependency that is [managed by `VDimensions.MSBuild.References`](supported_packages.md), our target will _decide_ if you need this dependency based on your TFM, and will automatically pick the _appropriate_ version per TFM. For TFMs that do no support the package you requested, the `PackageReference` will be removed without requiring your intervention.
+
+For the curious, the "approriateness" of the dependencies version is determined as follows:
+
+* if the project is a class library and needs a dependency `A`, the lowest compatible version of `A` is selected. This gives the most flexibility scenarios for a library, as it ensures that the library will play nice with other dependencies that may require a higher-version of `A`, and allows the referencing project of your library to override the version of `A` with any compatible higher version number. (see how [dependency resolution works](https://learn.microsoft.com/en-us/nuget/concepts/dependency-resolution) for nuget packages for more info.)
+* if the project is not a class library, it is assumed that it is an application, and then the highest compatible version of `A` is selected. Again, this should play nice with other libraries depending on `A` in your project, as they normally should request lower versions of `A`. Eventually, you may (and probably should) specify a more recent version of `A` as an explicit dependency (this time you supply the `Version` attribute yourself). All this ensures that in the final build, `A` can be provided with the latest patches and security vulnerability fixes.
