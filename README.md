@@ -4,14 +4,14 @@ This repository contains a currated list of MSBuild targets which would add pack
 
 ## Foreword
 
-As .NET changes and many commonly used libraries may become obsolete, or switch to different packages for different target framework. It becomes a pain to maintain multiple projects with similar setup that require complex package resolution. A good example is `Microsoft.AspNetCore` which has accomodated significant changes and package deprecations across its versions.
+As .NET changes and many commonly used libraries may become obsolete, or switch to different packages for different target frameworks. It becomes a pain to maintain multiple projects with similar setup that require complex package resolution. A good example is `Microsoft.AspNetCore` which has accomodated significant changes and package deprecations across its versions.
 
 At VDimensions, we identified this maintainability struggle and came up with a solution, which is de-facto __this project__. 
 
-## How to use
+## How to Use
 
 1. Add this project as a git submodule to your project
-2. Add a reference to the `VDimensions.MSBuild.References.targets` target (which is at the root of this project) to your `.csproj` file, (or preferrably, in `Directory.Build.targets`)
+2. Add a reference to the `VDimensions.MSBuild.References.targets` target (which is at the root of this project) at the end of your `.csproj` file, (or preferrably, in `Directory.Build.targets` if you use it)
 3. For CI builds, make sure that `--recursive` flag is passed to the git checkout command
 4. Remove the `Version` property of your `PackageReference` tags in the `.csproj` file(s) for depedencies that are managed by `VDimensions.MSBuild.References`. Here is a [full list](supported_packages.md) of the packages that this project supports.  
 
@@ -25,10 +25,10 @@ The solution would be to increase your knowledge of how MSBuild works, and use M
 
 When you work on multiple projects with this problem, it can easily become a pain copy-pasting similar msbuild code across projects, and fighting it to make it work.
 
-## How it works
+## This Project's Solution
 
-We wanted to make referencing a package to your project simple and inthuitive. So, you still need to add a `PackageReference` item in your .csproj as always, but this time omit the version:
+We wanted to make referencing a package to a project simple and inthuitive. So, you still need to add a `PackageReference` item in your .csproj as always, but this time omit the version:
 
         <PackageReference Include="SomePackage" />
 
-If you followed step 2 from [How to use](#how-to-use), you will have the `VDimensions.MSBuild.References.targets` in your project. As long as `SomePackage` is a dependency that is [managed by `VDimensions.MSBuild.References`](supported_packages.md), our target will "decide" if you need this dependency based on your TFM, and will automatically pick the latest compatible version per TFM. For TFMs that do no support the package you requested, the `PackageReference` will be removed without needing your intervention.
+If you followed step 2 from [How to Use](#how-to-use), you will have the `VDimensions.MSBuild.References.targets` in your project. As long as `SomePackage` is a dependency that is [managed by `VDimensions.MSBuild.References`](supported_packages.md), our target will "decide" if you need this dependency based on your TFM, and will automatically pick the latest compatible version per TFM. For TFMs that do no support the package you requested, the `PackageReference` will be removed without needing your intervention.
