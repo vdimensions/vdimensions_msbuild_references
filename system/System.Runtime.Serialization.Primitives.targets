@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
+    <!-- 
+     | netframework
+     -->
+    <When Condition=" '$(TargetFramework)' == 'net461' ">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.0.10" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net45' ">
+      <ItemGroup>
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
     <When Condition=" '$(TargetFramework)' == 'net403' ">
       <ItemGroup>
         <PackageReference Remove="System.Runtime.Serialization.Primitives" />
@@ -24,7 +39,8 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.1.1" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>
