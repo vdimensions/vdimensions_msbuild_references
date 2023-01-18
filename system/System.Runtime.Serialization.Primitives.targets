@@ -39,8 +39,7 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.1.1" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Runtime.Serialization.Primitives" Version="4.3.0" />
       </ItemGroup>
     </Otherwise>
   </Choose>

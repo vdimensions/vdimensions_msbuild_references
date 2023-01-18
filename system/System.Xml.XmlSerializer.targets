@@ -38,8 +38,7 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Xml.XmlSerializer" Version="4.0.11" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3.0" />
       </ItemGroup>
     </Otherwise>
   </Choose>

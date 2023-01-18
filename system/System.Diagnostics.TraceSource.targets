@@ -66,8 +66,7 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Diagnostics.TraceSource" Version="4.3" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Diagnostics.TraceSource" Version="4.0" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Diagnostics.TraceSource" Version="4.3" />
       </ItemGroup>
     </Otherwise>
   </Choose>
