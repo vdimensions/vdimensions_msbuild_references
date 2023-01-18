@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    
+    <!-- 
+     | netcoreapp 
+     -->
+    <When Condition="'$(TargetFramework)' == 'netcorapp3.0'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcorapp2.2'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcorapp2.1'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcorapp2.0'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcorapp1.1'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcorapp1.0'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+   
+    <!--
+     | netframework 
+     -->
+    <When Condition="'$(TargetFramework)' == 'net461'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net46'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net452'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net451'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net45'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net40'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NET.Test.Sdk" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net30'">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NET.Test.Sdk" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NET.Test.Sdk" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.4.1" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

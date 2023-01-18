@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!--
+     | netframework
+     -->
+    <When Condition=" '$(TargetFramework)' == 'net45' ">
+      <ItemGroup>
+        <PackageReference Update="System.Resources.ResourceManager" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Resources.ResourceManager" Version="4.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net40'">
+      <ItemGroup>
+        <PackageReference Remove="System.Resources.ResourceManager" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Remove="System.Resources.ResourceManager" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net30'">
+      <ItemGroup>
+        <PackageReference Remove="System.Resources.ResourceManager" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <ItemGroup>
+        <PackageReference Remove="System.Resources.ResourceManager" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Resources.ResourceManager" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Resources.ResourceManager" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

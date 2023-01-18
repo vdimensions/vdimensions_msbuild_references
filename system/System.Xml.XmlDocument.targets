@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!-- 
+     | netstandard
+     -->
+    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+
+    <!--
+     | netframework
+     -->
+    <When Condition=" '$(TargetFramework)' == 'net46' ">
+      <ItemGroup>
+        <PackageReference Update="System.Xml.XmlDocument" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Xml.XmlDocument" Version="4.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net45' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net40'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net30'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Xml.XmlDocument" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Xml.XmlDocument" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

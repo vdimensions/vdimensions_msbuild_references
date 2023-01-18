@@ -2,9 +2,28 @@
 <Project>
   <Choose>
     <!-- 
+     | netstandard
+     -->
+    
+    <!-- 
      | netframework
      -->
-    <When Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' " >
+    <When Condition=" '$(TargetFramework)' == 'net40' " >
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlSerializer" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net35' " >
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlSerializer" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net30' " >
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlSerializer" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net20' " >
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlSerializer" />
       </ItemGroup>
@@ -12,7 +31,7 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3.0" />
+        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3" />
       </ItemGroup>
     </Otherwise>
   </Choose>

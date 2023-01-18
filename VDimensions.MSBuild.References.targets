@@ -8,10 +8,13 @@
     <Import Project="$(MSBuildThisFileDirectory)/shims/NetLegacySupport.Tuple.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/shims/Portable.ConcurrentDictionary.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/shims/System.Threading.Tasks.Unofficial.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/shims/VDimensions.NetStandard.Shim.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/shims/VDimensions.NETStandard.Shim.targets" />
 
     <!-- log4net -->
     <Import Project="$(MSBuildThisFileDirectory)/log4net/log4net.targets" />
+
+    <!-- Microsoft -->
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/test.sdk/Microsoft.NET.Test.Sdk.targets" />
 
     <!-- MySqlConnector -->
     <Import Project="$(MSBuildThisFileDirectory)/mysqlconnector/MySqlConnector.targets" />
@@ -25,10 +28,14 @@
 
     <!-- System -->
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Collections.Immutable.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Data.SqlClient.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Diagnostics.TraceSource.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Resources.ResourceManager.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Runtime.CompilerServices.Unsafe.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Runtime.Serialization.Primitives.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Threading.Thread.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XDocument.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XmlDocument.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XmlSerializer.targets" />
 
     <!-- YamlDotNet -->    

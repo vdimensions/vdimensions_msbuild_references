@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    
+    <!--
+     | netstandard
+     -->
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+
+    <!--
+     | netcoreapp
+     -->
+    <When Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp1.1'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netframework
+     -->
+    <When Condition="'$(TargetFramework)' == 'net45'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net40'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net30'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net20'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
+
+
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Data.SqlClient" Version="4.8.5" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
