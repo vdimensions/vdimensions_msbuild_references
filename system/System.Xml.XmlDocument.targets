@@ -4,17 +4,17 @@
     <!-- 
      | netstandard
      -->
-    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
@@ -34,27 +34,27 @@
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net403'">
+    <When Condition=" '$(TargetFramework)' == 'net403' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net40'">
+    <When Condition=" '$(TargetFramework)' == 'net40' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net35'">
+    <When Condition=" '$(TargetFramework)' == 'net35' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net30'">
+    <When Condition=" '$(TargetFramework)' == 'net30' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net20'">
+    <When Condition=" '$(TargetFramework)' == 'net20' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
@@ -62,8 +62,7 @@
 
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Xml.XmlDocument" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Xml.XmlDocument" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Xml.XmlDocument" Version="4.3.0"  />
       </ItemGroup>
     </Otherwise>
   </Choose>
