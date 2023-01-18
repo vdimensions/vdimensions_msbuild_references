@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>  
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'net35'">
+      <ItemGroup>
+        <PackageReference Update="System.Threading.Tasks.Unofficial" Version="3.1.*" />
+      </ItemGroup>
+    </When>
+
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Remove="System.Threading.Tasks.Unofficial" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

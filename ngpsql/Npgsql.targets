@@ -87,6 +87,21 @@
         <PackageReference Update="Npgsql" Version="3.2.7" />
       </ItemGroup>
     </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
+      <ItemGroup>
+        <PackageReference Remove="Npgsql" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+      <ItemGroup>
+        <PackageReference Remove="Npgsql" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
+      <ItemGroup>
+        <PackageReference Remove="Npgsql" />
+      </ItemGroup>
+    </When>
 
     <!-- 
      | netframework      
@@ -154,6 +169,11 @@
     <When Condition=" '$(TargetFramework)' == 'net35' ">
       <ItemGroup>
         <PackageReference Update="Npgsql" Version="2.2.7" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net20' ">
+      <ItemGroup>
+        <PackageReference Remove="Npgsql" />
       </ItemGroup>
     </When>
 

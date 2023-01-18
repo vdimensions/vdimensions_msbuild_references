@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+    <!-- Kajabity.Tools -->
+    <Import Project="$(MSBuildThisFileDirectory)/kajabity.tools/Kajabity.Tools.Java.targets" />
+
+    <!-- Shims -->
+    <Import Project="$(MSBuildThisFileDirectory)/shims/LinqBridge.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/shims/NetLegacySupport.Tuple.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/shims/Portable.ConcurrentDictionary.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/shims/System.Threading.Tasks.Unofficial.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/shims/VDimensions.NetStandard.Shim.targets" />
+
+    <!-- log4net -->
+    <Import Project="$(MSBuildThisFileDirectory)/log4net/log4net.targets" />
+
+    <!-- MySqlConnector -->
+    <Import Project="$(MSBuildThisFileDirectory)/mysqlconnector/MySqlConnector.targets" />
+
+    <!-- Npgsql -->
+    <Import Project="$(MSBuildThisFileDirectory)/npgsql/Npgsql.targets" />
+
+    <!-- NUnit -->
+    <Import Project="$(MSBuildThisFileDirectory)/nunit/NUnit.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/nunit/NUnit3TestAdapter.targets" />
+
+    <!-- System -->
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Collections.Immutable.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Diagnostics.TraceSource.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Runtime.CompilerServices.Unsafe.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Runtime.Serialization.Primitives.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Threading.Thread.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XmlSerializer.targets" />
+
+    <!-- YamlDotNet -->    
+    <Import Project="$(MSBuildThisFileDirectory)/yamldotnet/YamlDotNet.targets" />
+</Project>

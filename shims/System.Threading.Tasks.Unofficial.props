@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ItemGroup>
-	  <PackageReference Update="Kajabity.Tools.Java" Version="0.3.7879.40798" />
+    <PackageReference Include="System.Threading.Tasks.Unofficial" Version="3.1" />
   </ItemGroup>
 </Project>
