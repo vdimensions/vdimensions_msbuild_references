@@ -2,12 +2,14 @@
 <Project>
   <Choose>
     <!-- 
-     | netstandard
-     -->
-    
-    <!-- 
      | netframework
      -->
+    <When Condition=" '$(TargetFramework)' == 'net45' " >
+      <ItemGroup>
+        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Xml.XmlSerializer" Version="4.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
     <When Condition=" '$(TargetFramework)' == 'net40' " >
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlSerializer" />
@@ -31,7 +33,8 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3" />
+        <PackageReference Update="System.Xml.XmlSerializer" Version="4.3.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Xml.XmlSerializer" Version="4.0.11" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>
