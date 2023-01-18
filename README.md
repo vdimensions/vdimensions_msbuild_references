@@ -20,7 +20,7 @@ Normally, one would use the `<PackageReference Include="SomePackage" Version="Ve
 
 However, if you develop libraries, or in your attempt to keep up with the latest developments of `dotnet`, you may need to multi-target your projects. This is where you may end up in scenarios where the `PackageReference` is inapropriate (e.g. if you need to target `netstandard1.0` and `net6.0`, and `SomePackage` does not support the former at all). Or, you may need to use different `Version`, again depending on the different target framework.
 
-The solution would be to increase your knowledge of how MSBuild works, and use MSBuild conditional syntax to smartly reference whatever you need. To some people, this may already
+The solution would be to increase your knowledge of how MSBuild works, and use MSBuild conditional syntax to smartly reference whatever you need. To some people, this may seem too much struggle for making a single dependency work. With more dependencies requiring attention, each could end up requiring its own MSBuild "hacks".
 
 When you work on multiple projects with this problem, it can easily become a pain copy-pasting similar msbuild code across projects, and fighting it to make it work.
 
