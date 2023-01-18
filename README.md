@@ -13,6 +13,7 @@ At VDimensions, we identified this maintainability struggle and came up with a s
 1. Add this project as a git submodule to your project
 2. Add a reference to the `VDimensions.MSBuild.References.targets` target (which is at the root of this project) to your `.csproj` file, (or preferrably, in `Directory.Build.targets`)
 3. For CI builds, make sure that `--recursive` flag is passed to the git checkout command
+4. Remove the `Version` property of your `PackageReference` tags in the `.csproj` file(s) for depedencies that are managed by `VDimensions.MSBuild.References`. Here is a [full list](supported_packages.md) of the packages that this project supports.  
 
 ## The Problem
 
@@ -30,4 +31,4 @@ We wanted to make referencing a package to your project simple and inthuitive. S
 
         <PackageReference Include="SomePackage" />
 
-If you followed step 2 from [How to use](#how-to-use), you will have the `VDimensions.MSBuild.References.targets` in your project. As long as `SomePackage` is a dependency that is managed by `VDimensions.MSBuild.References`, our target will "decide" if you need this dependency based on your TFM, and will automatically pick the latest compatible version per TFM. For TFMs that do no support the package you requested, the `PackageReference` will be removed without needing your intervention.
+If you followed step 2 from [How to use](#how-to-use), you will have the `VDimensions.MSBuild.References.targets` in your project. As long as `SomePackage` is a dependency that is [managed by `VDimensions.MSBuild.References`](supported_packages.md), our target will "decide" if you need this dependency based on your TFM, and will automatically pick the latest compatible version per TFM. For TFMs that do no support the package you requested, the `PackageReference` will be removed without needing your intervention.
