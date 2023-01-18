@@ -34,6 +34,11 @@
         <PackageReference Remove="System.Xml.XmlDocument" />
       </ItemGroup>
     </When>
+    <When Condition="'$(TargetFramework)' == 'net403'">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XmlDocument" />
+      </ItemGroup>
+    </When>
     <When Condition="'$(TargetFramework)' == 'net40'">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XmlDocument" />

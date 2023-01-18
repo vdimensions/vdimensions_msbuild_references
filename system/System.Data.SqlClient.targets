@@ -48,6 +48,11 @@
         <PackageReference Remove="System.Data.SqlClient" />
       </ItemGroup>
     </When>
+    <When Condition="'$(TargetFramework)' == 'net403'">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SqlClient" />
+      </ItemGroup>
+    </When>
     <When Condition="'$(TargetFramework)' == 'net35'">
       <ItemGroup>
         <PackageReference Remove="System.Data.SqlClient" />

@@ -16,22 +16,27 @@
         <PackageReference Update="System.Xml.XDocument" Version="4.0.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net40'">
+    <When Condition=" '$(TargetFramework)' == 'net403' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net35'">
+    <When Condition=" '$(TargetFramework)' == 'net40' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net30'">
+    <When Condition=" '$(TargetFramework)' == 'net35' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XDocument" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net20'">
+    <When Condition=" '$(TargetFramework)' == 'net30' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Xml.XDocument" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net20' ">
       <ItemGroup>
         <PackageReference Remove="System.Xml.XDocument" />
       </ItemGroup>

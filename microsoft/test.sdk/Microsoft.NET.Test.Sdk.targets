@@ -64,6 +64,11 @@
         <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
       </ItemGroup>
     </When>
+    <When Condition="'$(TargetFramework)' == 'net403'">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />
+      </ItemGroup>
+    </When>
     <When Condition="'$(TargetFramework)' == 'net40'">
       <ItemGroup>
         <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.3.2" />

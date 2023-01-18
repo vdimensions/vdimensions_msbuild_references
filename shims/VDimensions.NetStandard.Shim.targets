@@ -4,122 +4,132 @@
     <!--
      | NETStandard 
      -->
-    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.6'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.5'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.4'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.2'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.0'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
     <!--
      | netframework 
      -->
-    <When Condition="'$(TargetFramework)' == 'net481'">
+    <When Condition=" '$(TargetFramework)' == 'net481' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net48'">
+    <When Condition=" '$(TargetFramework)' == 'net48' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net472'">
+    <When Condition=" '$(TargetFramework)' == 'net472' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net471'">
+    <When Condition=" '$(TargetFramework)' == 'net471' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net47'">
+    <When Condition=" '$(TargetFramework)' == 'net47' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net462'">
+    <When Condition=" '$(TargetFramework)' == 'net463' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net461'">
+    <When Condition=" '$(TargetFramework)' == 'net462' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net46'">
+    <When Condition=" '$(TargetFramework)' == 'net461' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net452'">
+    <When Condition=" '$(TargetFramework)' == 'net46' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net451'">
+    <When Condition=" '$(TargetFramework)' == 'net452' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net45'">
+    <When Condition=" '$(TargetFramework)' == 'net451' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net40'">
+    <When Condition=" '$(TargetFramework)' == 'net45' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net35'">
+    <When Condition=" '$(TargetFramework)' == 'net403' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net30'">
+    <When Condition=" '$(TargetFramework)' == 'net40'">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'net20'">
+    <When Condition=" '$(TargetFramework)' == 'net35' ">
       <ItemGroup>
-        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.16" />
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net30' ">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net20' ">
+      <ItemGroup>
+        <PackageReference Update="VDimensions.NETStandard.Shim" Version="0.1.22" />
       </ItemGroup>
     </When>
 
