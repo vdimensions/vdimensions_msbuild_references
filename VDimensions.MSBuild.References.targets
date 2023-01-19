@@ -42,6 +42,12 @@
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XmlDocument.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XmlSerializer.targets" />
 
+    <!-- VDimensions -->
+    <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Defaults.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Copyright.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Versioning.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Multitargeting.targets" />
+
     <!-- YamlDotNet -->    
     <Import Project="$(MSBuildThisFileDirectory)/yamldotnet/YamlDotNet.targets" />
 </Project>
