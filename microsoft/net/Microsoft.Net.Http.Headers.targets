@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'netcoreapp2.2' OR '$(TargetFramework)' == 'netstandard2.0'">
+    <!-- 
+     | netstandard 
+     -->
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
       <ItemGroup>
-        <PackageReference Update="Microsoft.Net.Http.Headers" Version="2.2.*" />
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+
+    <!-- 
+     | netcoreapp 
+    -->
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.Net.Http.Headers" />
       </ItemGroup>
     </When>
     
     <Otherwise>
       <ItemGroup>
+        <PackageReference Update="Microsoft.Net.Http.Headers" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.Net.Http.Headers" Version="2.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>

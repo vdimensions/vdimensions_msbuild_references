@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <When Condition=" '$(TargetFrameworkIdentifier)' == '.NETStandard' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.SQLite.Core" />
+        <PackageReference Update="Stub.System.Data.SQLite.Core.NetStandard" Version="1.0" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Update="System.Data.SQLite.Core" Version="1.0" />
+        <PackageReference Remove="Stub.System.Data.SQLite.Core.NetStandard" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

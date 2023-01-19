@@ -14,6 +14,7 @@
     <Import Project="$(MSBuildThisFileDirectory)/log4net/log4net.targets" />
 
     <!-- Microsoft -->
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/net/Microsoft.Net.Http.Headers.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/test.sdk/Microsoft.NET.Test.Sdk.targets" />
 
     <!-- MySqlConnector -->
@@ -25,6 +26,9 @@
     <!-- NUnit -->
     <Import Project="$(MSBuildThisFileDirectory)/nunit/NUnit.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/nunit/NUnit3TestAdapter.targets" />
+
+    <!-- SQLite -->
+    <Import Project="$(MSBuildThisFileDirectory)/sqlite/System.Data.SQLite.Core.targets" />
 
     <!-- System -->
     <Import Project="$(MSBuildThisFileDirectory)/system/System.Collections.Immutable.targets" />
