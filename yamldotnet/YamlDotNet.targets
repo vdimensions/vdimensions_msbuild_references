@@ -4,53 +4,61 @@
     <!-- 
      | netstandard
      -->
-    <When Condition="'$(TargetFramework)' == 'netstandard1.6'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+        <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.5'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+        <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.4'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+        <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+        <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
 
     <!-- 
      | netcoreapp
      -->
-     <When Condition="'$(TargetFramework)' == 'netcoreapp1.1'">
+     <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+        <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
-    <When Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="11.2.1" />
+        <PackageReference Update="YamlDotNet" Version="11.2.1" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
 
     <!-- 
      | netframewrrk
      -->
-    <When Condition="'$(TargetFramework)' == 'net20'">
+    <When Condition=" '$(TargetFramework)' == 'net20' ">
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="8.1.2" />
+        <PackageReference Update="YamlDotNet" Version="8.1.2" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
 
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="YamlDotNet" Version="12.3.1" />
+        <PackageReference Update="YamlDotNet" Version="12.3.1" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="YamlDotNet" Version="5.1.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>
