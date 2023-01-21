@@ -45,15 +45,14 @@
 
     <When Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' " >
       <ItemGroup>
-        <Reference Include="System.Configuration" />
         <PackageReference Remove="System.Configuration.ConfigurationManager" />
       </ItemGroup>
     </When>
 
     <Otherwise>
       <ItemGroup>
-        <Reference Remove="System.Configuration" />
-        <PackageReference Update="System.Configuration.ConfigurationManager" Version="4.4.*" />
+        <PackageReference Update="System.Configuration.ConfigurationManager" Version="7.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Configuration.ConfigurationManager" Version="4.4.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>

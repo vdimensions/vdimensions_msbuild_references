@@ -1,53 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-    <!-- Kajabity.Tools -->
-    <Import Project="$(MSBuildThisFileDirectory)/kajabity.tools/Kajabity.Tools.Java.targets" />
-
+    <!-- Framework -->
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Collections.Immutable.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Configuration.ConfigurationManager.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.Common.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.DataSetExtensions.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.Odbc.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.SqlClient.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Diagnostics.TraceSource.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Resources.ResourceManager.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Runtime.CompilerServices.Unsafe.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Runtime.Serialization.Primitives.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Threading.Thread.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Xml.XDocument.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Xml.XmlDocument.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Xml.XmlSerializer.targets" />
     <!-- Shims -->
     <Import Project="$(MSBuildThisFileDirectory)/shims/LinqBridge.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/shims/NetLegacySupport.Tuple.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/shims/Portable.ConcurrentDictionary.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/shims/System.Threading.Tasks.Unofficial.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/shims/VDimensions.NETStandard.Shim.targets" />
-
-    <!-- log4net -->
-    <Import Project="$(MSBuildThisFileDirectory)/log4net/log4net.targets" />
-
+    <Import Project="$(MSBuildThisFileDirectory)/shims/VDimensions.Shims.NETStandard.targets" />
     <!-- Microsoft -->
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/net/Microsoft.Net.Http.Headers.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/test.sdk/Microsoft.NET.Test.Sdk.targets" />
-
-    <!-- MySqlConnector -->
-    <Import Project="$(MSBuildThisFileDirectory)/mysqlconnector/MySqlConnector.targets" />
-
-    <!-- Npgsql -->
-    <Import Project="$(MSBuildThisFileDirectory)/npgsql/Npgsql.targets" />
-
-    <!-- NUnit -->
-    <Import Project="$(MSBuildThisFileDirectory)/nunit/NUnit.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/nunit/NUnit3TestAdapter.targets" />
-
-    <!-- SQLite -->
-    <Import Project="$(MSBuildThisFileDirectory)/sqlite/System.Data.SQLite.Core.targets" />
-
-    <!-- System -->
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Collections.Immutable.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Data.SqlClient.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Diagnostics.TraceSource.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Resources.ResourceManager.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Runtime.CompilerServices.Unsafe.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Runtime.Serialization.Primitives.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Threading.Thread.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XDocument.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XmlDocument.targets" />
-    <Import Project="$(MSBuildThisFileDirectory)/system/System.Xml.XmlSerializer.targets" />
-
     <!-- VDimensions -->
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Defaults.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Copyright.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Versioning.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Multitargeting.targets" />
-
-    <!-- YamlDotNet -->    
-    <Import Project="$(MSBuildThisFileDirectory)/yamldotnet/YamlDotNet.targets" />
+    <!-- 3rd party -->
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/kajabity.tools/Kajabity.Tools.Java.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/log4net.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/MySqlConnector.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/Npgsql.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/nunit/NUnit.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/nunit/NUnit3TestAdapter.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/System.Data.SQLite.Core.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/3rd_party/YamlDotNet.targets" />
 </Project>
