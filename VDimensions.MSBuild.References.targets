@@ -29,8 +29,8 @@
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Copyright.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Versioning.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Multitargeting.targets" />
-    <!-- 3rd party -->
-    
+    <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.ExternalAnnotations.targets" />
+    <!-- 3rd party -->    
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/JerBrains.Annotations.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/kajabity.tools/Kajabity.Tools.Java.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/3rd_party/log4net.targets" />

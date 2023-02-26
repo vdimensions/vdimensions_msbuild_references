@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ItemGroup>
-    <PackageReference Update="VDimensions.MSBuild.Sdk.Copyright" Version="0.6.11" />
+    <PackageReference Update="VDimensions.MSBuild.Sdk.Copyright" Version="0.6.12" />
   </ItemGroup>
 </Project>
