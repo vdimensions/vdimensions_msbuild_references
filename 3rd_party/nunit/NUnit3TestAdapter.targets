@@ -8,6 +8,11 @@
     <!-- 
      | netcoreapp
      -->
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.5.0" />
+      </ItemGroup>
+    </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
       <ItemGroup>
         <PackageReference Update="NUnit3TestAdapter" Version="4.3.0" />
@@ -61,6 +66,11 @@
     <!-- 
      | netframework      
     -->
+    <When Condition=" '$(TargetFramework)' == 'net462' ">
+      <ItemGroup>
+        <PackageReference Update="NUnit3TestAdapter" Version="4.5.0" />
+      </ItemGroup>
+    </When>
     <When Condition=" '$(TargetFramework)' == 'net20' ">
       <ItemGroup>
         <PackageReference Remove="NUnit3TestAdapter" />
@@ -69,7 +79,7 @@
 
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="NUnit3TestAdapter" Version="4.3.1" />
+        <PackageReference Update="NUnit3TestAdapter" Version="4.5.0" />
       </ItemGroup>
     </Otherwise>
   </Choose>
