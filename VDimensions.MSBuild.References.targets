@@ -8,6 +8,7 @@
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.Odbc.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.SqlClient.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Diagnostics.TraceSource.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Drawing.Common.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Numerics.Vectors.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Reactive.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Resources.ResourceManager.targets" />
