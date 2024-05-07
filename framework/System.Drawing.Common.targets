@@ -197,8 +197,8 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Data.Common" Version="8.0.4" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Common" Version="4.7.2" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Drawing.Common" Version="8.0.4" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Drawing.Common" Version="4.7.2" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>
