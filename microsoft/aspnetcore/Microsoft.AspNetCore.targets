@@ -34,19 +34,19 @@
     <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
       <ItemGroup>
         <PackageReference Update="Microsoft.AspNetCore" Version="2.2.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Microsoft.AspNetCore" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore" Version="2.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
       <ItemGroup>
         <PackageReference Update="Microsoft.AspNetCore" Version="2.2.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Microsoft.AspNetCore" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore" Version="2.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>    
     <When Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
       <ItemGroup>
         <PackageReference Update="Microsoft.AspNetCore" Version="2.2.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Microsoft.AspNetCore" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore" Version="2.2.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
