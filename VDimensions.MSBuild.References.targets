@@ -15,6 +15,7 @@
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Runtime.CompilerServices.Unsafe.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Runtime.Serialization.Primitives.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Text.RegularExpressions.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Text.Encodings.Web.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Threading.Thread.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Xml.XDocument.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Xml.XmlDocument.targets" />
@@ -26,7 +27,9 @@
     <Import Project="$(MSBuildThisFileDirectory)/shims/System.Threading.Tasks.Unofficial.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/shims/VDimensions.Shims.NETStandard.targets" />
     <!-- Microsoft -->
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/aspnetcore/Microsoft.AspNetCore.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/net/Microsoft.Net.Http.Headers.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/netcore/Microsoft.NetCore.App.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/test.sdk/Microsoft.NET.Test.Sdk.targets" />
     <!-- VDimensions -->
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Defaults.targets" />

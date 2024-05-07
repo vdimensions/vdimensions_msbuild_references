@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!-- net -->
+    <When Condition=" '$(TargetFramework)' == 'net8.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net7.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net6.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <!-- netcoreapp -->
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>    
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.8" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.NetCore.App" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NetCore.App" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NetCore.App" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NetCore.App" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NetCore.App" />
+      </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.NetCore.App" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
