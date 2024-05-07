@@ -28,6 +28,7 @@
     <Import Project="$(MSBuildThisFileDirectory)/shims/VDimensions.Shims.NETStandard.targets" />
     <!-- Microsoft -->
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/aspnetcore/Microsoft.AspNetCore.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/data/Microsoft.Data.SqlClient.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/net/Microsoft.Net.Http.Headers.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/netcore/Microsoft.NetCore.App.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.GitHub.targets" />
