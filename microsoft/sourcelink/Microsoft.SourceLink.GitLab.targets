@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.SourceLink.GitLab" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+    <PackageReference Update="Microsoft.SourceLink.GitLab" Version="1.0.0" Condition=" '$(OutputType)' == 'Library' " />
+  </ItemGroup>
+</Project>

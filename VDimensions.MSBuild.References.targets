@@ -30,6 +30,8 @@
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/aspnetcore/Microsoft.AspNetCore.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/net/Microsoft.Net.Http.Headers.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/netcore/Microsoft.NetCore.App.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.GitHub.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.GitLab.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/test.sdk/Microsoft.NET.Test.Sdk.targets" />
     <!-- VDimensions -->
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Defaults.targets" />
