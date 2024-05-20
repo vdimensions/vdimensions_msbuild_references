@@ -216,7 +216,7 @@
     <Otherwise>
       <ItemGroup>
         <PackageReference Update="System.Data.OleDb" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.OleDb" Version="4.5"   Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.OleDb" Version="4.6.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>

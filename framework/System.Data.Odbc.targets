@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Choose>
-    <!-- 
-     | netplatform
-     -->
+    <!-- netplatform -->
+    <When Condition=" '$(TargetFramework)' == 'net8.0' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net7.0' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
     <When Condition=" '$(TargetFramework)' == 'net6.0' ">
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="7.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="6.0" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="6.0.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net5.0' ">
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="5.0" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
 
-    <!-- 
-     | netstandard 
-     -->
+    <!-- netstandard -->
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="6.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.Odbc" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.Odbc" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.Odbc" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.Odbc" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
+      <ItemGroup>
+        <PackageReference Remove="System.Data.Odbc" />
+      </ItemGroup>
+    </When>
     <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
       <ItemGroup>
         <PackageReference Remove="System.Data.Odbc" />
@@ -36,32 +81,32 @@
      -->
     <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="6.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="4.5" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="6.0.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="4.5" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="4.5" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="4.5" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="5.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="4.5" Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
@@ -75,13 +120,53 @@
       </ItemGroup>
     </When>
 
-    <!-- 
-     | netframework 
-     -->
+    <!-- netframework -->
+    <When Condition=" '$(TargetFramework)' == 'net481' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net48' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net472' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net471' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net47' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net463' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net462' ">
+      <ItemGroup>
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
     <When Condition=" '$(TargetFramework)' == 'net461' ">
       <ItemGroup>
         <PackageReference Update="System.Data.Odbc" Version="6.0.1" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="4.5"   Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </When>
     <When Condition=" '$(TargetFramework)' == 'net46' ">
@@ -132,8 +217,8 @@
     
     <Otherwise>
       <ItemGroup>
-        <PackageReference Update="System.Data.Odbc" Version="7.0.0" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="System.Data.Odbc" Version="4.5"   Condition=" '$(OutputType)' == 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="8.0.0" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="System.Data.Odbc" Version="4.5.0" Condition=" '$(OutputType)' == 'Library' " />
       </ItemGroup>
     </Otherwise>
   </Choose>
