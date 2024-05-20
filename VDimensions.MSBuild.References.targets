@@ -5,6 +5,7 @@
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Configuration.ConfigurationManager.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.Common.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.DataSetExtensions.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.OleDb.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.Odbc.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Data.SqlClient.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/framework/System.Diagnostics.TraceSource.targets" />
