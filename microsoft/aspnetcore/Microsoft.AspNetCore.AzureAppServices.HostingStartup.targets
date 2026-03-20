@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!-- net -->
+    <When Condition=" '$(TargetFramework)' == 'net10.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="10.0.5" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="10.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net9.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="9.0.14" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="9.0.10" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(TargetFramework)' == 'net8.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="8.0.21" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="8.0.21" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.AspNetCore.AzureAppServices.HostingStartup" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>

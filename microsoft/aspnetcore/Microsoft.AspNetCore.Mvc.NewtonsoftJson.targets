@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Choose>
+    <!-- net -->
+    <When Condition=" '$(TargetFramework)' == 'net10.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="10.0.5" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="10.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net9.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.14" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.9" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net8.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.25" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net7.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.20" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net6.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.36" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.17" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+
+    <!-- netcoreapp -->
+    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+      <ItemGroup>
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.32" Condition=" '$(OutputType)' != 'Library' " />
+        <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" Condition=" '$(OutputType)' == 'Library' " />
+      </ItemGroup>
+    </When>
+    
+    <Otherwise>
+      <ItemGroup>
+        <PackageReference Remove="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
