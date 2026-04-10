@@ -1,231 +1,378 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project>
+﻿<Project>
   <Choose>
-    <!-- net -->
-    <When Condition=" '$(TargetFramework)' == 'net8.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net7.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="7.0.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net6.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="6.0.11" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net5.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="7.0.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-
-    <!-- netcoreapp -->
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="7.0.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-
-    <!-- netstandard -->
-    <When Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
-      <ItemGroup>
-        <PackageReference Remove="Npgsql" />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
-      <ItemGroup>
-        <PackageReference Remove="Npgsql" />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
-      <ItemGroup>
-        <PackageReference Remove="Npgsql" />
-      </ItemGroup>
-    </When>
-
-    <!-- netframework -->
-    <When Condition=" '$(TargetFramework)' == 'net481' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net48' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net472' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net471' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net47' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net463' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net462' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net461' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net46' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net452' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net451' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net45' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net403' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net40' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net35' ">
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'net20' ">
-      <ItemGroup>
-        <PackageReference Remove="Npgsql" />
-      </ItemGroup>
-    </When>
-
-    <Otherwise>
-      <ItemGroup>
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' != 'Library' " />
-        <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
-      </ItemGroup>
-    </Otherwise>
+  <When Condition=" '$(TargetFramework)' == 'net10.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net9.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net7.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="7.0.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="7.0.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net6.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="6.0.11" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="6.0.11" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net5.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="7.0.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="7.0.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="4.1.14" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="4.1.14" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="8.0.9" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="3.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="Npgsql" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="Npgsql" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net481' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net48' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net472' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net471' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net47' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net463' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net462' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="5.0.18" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net461' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="4.1.14" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="4.1.14" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.1.13" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net46' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net452' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net451' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net45' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="4.0.17" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="4.0.14" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net403' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net40' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net35' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net20' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
   </Choose>
+  <Otherwise>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </Otherwise>
 </Project>

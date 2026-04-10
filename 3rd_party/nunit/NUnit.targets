@@ -1,51 +1,374 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project>
+﻿<Project>
   <Choose>
-    <!-- 
-     | net
-     -->
-
-    <!-- 
-     | netcoreapp
-     -->
-
-    <!-- 
-     | netstandard
-     -->
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
-      <ItemGroup>
-        <PackageReference Remove="NUnit" />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
-      <ItemGroup>
-        <PackageReference Remove="NUnit" />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
-      <ItemGroup>
-        <PackageReference Remove="NUnit" />
-      </ItemGroup>
-    </When>
-    <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
-      <ItemGroup>
-        <PackageReference Remove="NUnit" />
-      </ItemGroup>
-    </When>
-
-    <!-- 
-     | netframework      
-    -->
-    <When Condition=" '$(TargetFramework)' == 'net20' ">
-      <ItemGroup>
-        <PackageReference Update="NUnit" Version="3.11.0" />
-      </ItemGroup>
-    </When>
-
-    <Otherwise>
-      <ItemGroup>
-        <PackageReference Update="NUnit" Version="3.13.3" />
-      </ItemGroup>
-    </Otherwise>
+  <When Condition=" '$(TargetFramework)' == 'net10.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.3.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.3.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net9.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.3.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.3.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.3.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.3.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net7.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net6.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net5.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.6.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.6.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.10.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.10.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.10.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.10.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.6.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.6.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.7.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.7.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.7.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.7.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Remove="NUnit" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Remove="NUnit" />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net481' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net48' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net472' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net471' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net47' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net463' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net462' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="4.0.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net461' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net46' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net452' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net451' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net45' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net403' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net40' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net35' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.14.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.2.1" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
+  <When Condition=" '$(TargetFramework)' == 'net20' ">
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="3.0.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="3.11.0" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="3.0.0" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </When>
   </Choose>
+  <Otherwise>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageVersion Include="NUnit" Version="2.5.7.10213" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
+      <PackageReference Update="NUnit" Version="2.5.7.10213" Condition=" '$(OutputType)' == 'Library' " />
+    </ItemGroup>
+  </Otherwise>
 </Project>
