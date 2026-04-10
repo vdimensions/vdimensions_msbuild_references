@@ -360,7 +360,6 @@
       <PackageReference Update="NUnit" Version="3.0.0" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </When>
-  </Choose>
   <Otherwise>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
       <PackageVersion Include="NUnit" Version="4.5.1" Condition=" '$(OutputType)' != 'Library' " />
@@ -371,4 +370,5 @@
       <PackageReference Update="NUnit" Version="2.5.7.10213" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </Otherwise>
+  </Choose>
 </Project>

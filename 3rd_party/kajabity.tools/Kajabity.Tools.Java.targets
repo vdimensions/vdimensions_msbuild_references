@@ -380,7 +380,6 @@
       <PackageReference Update="Kajabity.Tools.Java" Version="0.3.7879.40798" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </When>
-  </Choose>
   <Otherwise>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
       <PackageVersion Include="Kajabity.Tools.Java" Version="0.3.8895.38751" Condition=" '$(OutputType)' != 'Library' " />
@@ -391,4 +390,5 @@
       <PackageReference Update="Kajabity.Tools.Java" Version="0.3.7879.40798" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </Otherwise>
+  </Choose>
 </Project>

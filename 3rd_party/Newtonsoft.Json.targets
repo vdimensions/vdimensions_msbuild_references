@@ -380,7 +380,6 @@
       <PackageReference Update="Newtonsoft.Json" Version="13.0.1" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </When>
-  </Choose>
   <Otherwise>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
       <PackageVersion Include="Newtonsoft.Json" Version="13.0.4" Condition=" '$(OutputType)' != 'Library' " />
@@ -391,4 +390,5 @@
       <PackageReference Update="Newtonsoft.Json" Version="13.0.1" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </Otherwise>
+  </Choose>
 </Project>

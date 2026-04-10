@@ -360,7 +360,6 @@
       <PackageReference Remove="NUnit3TestAdapter" />
     </ItemGroup>
   </When>
-  </Choose>
   <Otherwise>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
       <PackageVersion Include="NUnit3TestAdapter" Version="3.7.0" Condition=" '$(OutputType)' != 'Library' " />
@@ -371,4 +370,5 @@
       <PackageReference Update="NUnit3TestAdapter" Version="3.0.10" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </Otherwise>
+  </Choose>
 </Project>

@@ -80,14 +80,13 @@ static void WriteTargetFile(Options options, ReferenceDefinition referenceDefini
             WritePackageVersion(options, referenceDefinition, targetFrameworkDefinition, writer);
             writer.WriteLine("  </When>");
         }
-        writer.WriteLine("  </Choose>");
-
         if (referenceDefinition.TargetFrameworkDefinitionFallback != null)
         {
             writer.WriteLine("  <Otherwise>");
             WritePackageVersion(options, referenceDefinition, referenceDefinition.TargetFrameworkDefinitionFallback, writer);
             writer.WriteLine("  </Otherwise>");
         }
+        writer.WriteLine("  </Choose>");
     }
     else if (referenceDefinition.TargetFrameworkDefinitionFallback != null)
     {
