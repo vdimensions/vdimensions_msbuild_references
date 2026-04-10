@@ -364,7 +364,6 @@
       <PackageReference Update="Npgsql" Version="2.2.7" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </When>
-  </Choose>
   <Otherwise>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
       <PackageVersion Include="Npgsql" Version="10.0.2" Condition=" '$(OutputType)' != 'Library' " />
@@ -375,4 +374,5 @@
       <PackageReference Update="Npgsql" Version="8.0.3" Condition=" '$(OutputType)' == 'Library' " />
     </ItemGroup>
   </Otherwise>
+  </Choose>
 </Project>
