@@ -34,8 +34,13 @@
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/data/Microsoft.Data.SqlClient.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/net/Microsoft.Net.Http.Headers.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/netcore/Microsoft.NetCore.App.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.BitBucket.Git.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.Common.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.Gitea.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.Gitee.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.GitHub.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.GitLab.targets" />
+    <Import Project="$(MSBuildThisFileDirectory)/microsoft/sourcelink/Microsoft.SourceLink.GitWeb.targets" />
     <Import Project="$(MSBuildThisFileDirectory)/microsoft/test.sdk/Microsoft.NET.Test.Sdk.targets" />
     <!-- VDimensions -->
     <Import Project="$(MSBuildThisFileDirectory)/vdimensions/VDimensions.MSBuild.Sdk.Defaults.targets" />

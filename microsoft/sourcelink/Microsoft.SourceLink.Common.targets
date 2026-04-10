@@ -1,8 +1,8 @@
 ﻿<Project>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
-      <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="10.0.201" />
+      <PackageVersion Include="Microsoft.SourceLink.Common" Version="10.0.201" />
     </ItemGroup>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
-      <PackageReference Update="Microsoft.SourceLink.GitHub" Version="10.0.201" />
+      <PackageReference Update="Microsoft.SourceLink.Common" Version="10.0.201" />
     </ItemGroup>
 </Project>

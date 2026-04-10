@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project>
-  <ItemGroup>
-    <PackageReference Update="VDimensions.MSBuild.Sdk.ExternalAnnotations" Version="0.6.12" />
-  </ItemGroup>
+﻿<Project>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
+      <PackageVersion Include="VDimensions.MSBuild.Sdk.ExternalAnnotations" Version="0.6.12" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
+      <PackageReference Update="VDimensions.MSBuild.Sdk.ExternalAnnotations" Version="0.6.12" />
+    </ItemGroup>
 </Project>

@@ -111,8 +111,15 @@ static void WritePackageVersionItemGroup(ReferenceDefinition referenceDefinition
     writer.WriteLine("    <ItemGroup Condition=\" '$(ManagePackageVersionsCentrally)' == 'true' \">");
     if (targetFrameworkDefinition.VersionRange != null)
     {
-        writer.WriteLine("      <PackageVersion Include=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' != 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MaxVersion);
-        writer.WriteLine("      <PackageVersion Include=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' == 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MinVersion);
+        if (StringComparer.Ordinal.Equals(targetFrameworkDefinition.VersionRange.MaxVersion, targetFrameworkDefinition.VersionRange.MinVersion))
+        {
+            writer.WriteLine("      <PackageVersion Include=\"{0}\" Version=\"{1}\" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MaxVersion);
+        }
+        else
+        {
+            writer.WriteLine("      <PackageVersion Include=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' != 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MaxVersion);
+            writer.WriteLine("      <PackageVersion Include=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' == 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MinVersion);
+        }
     }
     else
     {
@@ -126,8 +133,15 @@ static void WritePackageReferenceItemGroup(ReferenceDefinition referenceDefiniti
     writer.WriteLine("    <ItemGroup Condition=\" '$(ManagePackageVersionsCentrally)' != 'true' \">");
     if (targetFrameworkDefinition.VersionRange != null)
     {
-        writer.WriteLine("      <PackageReference Update=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' != 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MaxVersion);
-        writer.WriteLine("      <PackageReference Update=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' == 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MinVersion);
+        if (StringComparer.Ordinal.Equals(targetFrameworkDefinition.VersionRange.MaxVersion, targetFrameworkDefinition.VersionRange.MinVersion))
+        {
+            writer.WriteLine("      <PackageReference Update=\"{0}\" Version=\"{1}\" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MaxVersion);
+        }
+        else
+        {
+            writer.WriteLine("      <PackageReference Update=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' != 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MaxVersion);
+            writer.WriteLine("      <PackageReference Update=\"{0}\" Version=\"{1}\" Condition=\" '$(OutputType)' == 'Library' \" />", referenceDefinition.Name, targetFrameworkDefinition.VersionRange.MinVersion);
+        }
     }
     else
     {
