@@ -1,8 +1,8 @@
 ﻿<Project>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' == 'true' ">
-      <PackageVersion Include="VDimensions.MSBuild.Sdk.Copyright" Version="0.6.12" />
+      <PackageVersion Include="VDimensions.MSBuild.Sdk.Copyright" Version="0.7.7" />
     </ItemGroup>
     <ItemGroup Condition=" '$(ManagePackageVersionsCentrally)' != 'true' ">
-      <PackageReference Update="VDimensions.MSBuild.Sdk.Copyright" Version="0.6.12" />
+      <PackageReference Update="VDimensions.MSBuild.Sdk.Copyright" Version="0.7.7" />
     </ItemGroup>
 </Project>
